@@ -1,0 +1,19 @@
+use Test;      # a Standard module included with Rakudo 
+use lib '.';
+use wordfinder; 
+
+
+ 
+plan 5;
+ 
+# .... tests 
+my @test_array = ["bases", "base", "debased"];
+
+is check_file("abse"), ["abase", "abases", "abbes", "abbess", "abbesses", "abesse", "absee", "baases", "babes", "bases", "basses", "besa", "sabe", "sabes"];
+is check_file("abse", 5), ["abase", "abbes", "absee", "babes", "bases", "sabes"];
+is check_file("abse", "resources/test_dict.txt", 5), ["bases"];
+
+is check_array("abse", @test_array), ["bases", "base"];
+is check_array("abse", @test_array, 5), ["bases"];
+
+done-testing; 

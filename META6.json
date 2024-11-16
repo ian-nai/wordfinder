@@ -1,0 +1,23 @@
+{
+    "name": "wordfinder",
+    "auth": "zef:ian-nai",
+    "version": "0.0.1",
+    "api": 0,
+  
+    "provides": {
+      "wordfinder": "lib/wordfinder.rakumod"
+    },
+  
+    "depends":       [],
+    "build-depends": [],
+    "test-depends":  [],
+
+    "resources": [
+        "en_dict.txt"
+    ],
+
+    "source-url": "https://github.com/ian-nai/raku_wordfinder/",
+  
+    "tags":        [ "word finder", "nlp", "text analysis"],
+    "description": "Find words containing specified letters. Users can specify length and provide their own dictionaries of words."
+  }
